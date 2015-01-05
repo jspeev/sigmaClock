@@ -10,9 +10,6 @@ angular.module('sigmaWorldClockApp')
     ];
     
     //DEFAULT INPUT DATA MODEL
-    /*
-    var localDate = new Date();
-    */
     $scope.clock = ClockInputs;
     
     $scope.jsControlCity = {'cityname':'Toronto','value':0};
@@ -50,21 +47,12 @@ angular.module('sigmaWorldClockApp')
 	 //POPULATE SERVICE MODELS FOR DEPENDENCY INJECTION TO DIRECTIVES
 	 for(var iConfig = 0 ; iConfig < aryPlacementConfigs.length ; iConfig ++)
 	 	PlaceConfiguration.addItem(aryPlacementConfigs[iConfig]);						
-	    		
-	    		
-	 	 	
-	 //ClockInputs.controlTime = $filter('date')(localDate|'HH:mm:ss');
-	 //ClockInputs.controlInput = localDate;
+	  
 	 $scope.clock.addCity($scope.jsControlCity);
 	 
 	 for(var iWorldCity = 0 ; iWorldCity < $scope.aryWorldLocations.length ; iWorldCity ++)
 	 	$scope.clock.addCity($scope.aryWorldLocations[iWorldCity]);
-/*
-	 WorldInputs.setControlTime(localDate);
-    WorldInputs.addLocation($scope.jsControlCity);
-    for(var iWorldCity = 0 ; iWorldCity < $scope.aryWorldLocations.length ; iWorldCity ++)
-    	WorldInputs.addLocation($scope.aryWorldLocations[iWorldCity]);
-    	*/
+
     ///////////////////////////////////////////////////////////////////////
 	    						
 

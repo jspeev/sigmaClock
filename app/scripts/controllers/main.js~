@@ -70,6 +70,7 @@ angular.module('sigmaWorldClockApp')
 
  	$interval(function(){
  		$scope.clock.controlTime.setSeconds($scope.clock.controlTime.getSeconds()+5);
+ 		$scope.clock.increment ++;
  	},5000);	    						
 	    							
   });

@@ -28,11 +28,10 @@ angular.module('sigmaWorldClockApp')
       	
       	function resetTime(){
       		
-      		var ctrlTime = $scope.clock.controlTime;
 	       	var timeOffset = parseInt($scope.clock.getCity($scope.cityName).value);
 	       	
-	       	$scope.adjustedTime = new Date(ctrlTime.getFullYear(), ctrlTime.getMonth(), ctrlTime.getDate(), ctrlTime.getHours()+timeOffset, ctrlTime.getMinutes(), ctrlTime.getSeconds());
-	       	
+	       	$scope.adjustedTime = new Date($scope.clock.controlTime);
+	       	$scope.adjustedTime.setHours($scope.adjustedTime.getHours()+timeOffset);
 	       	$scope.placeconfig = PlaceConfiguration.getItem($scope.loc);
 	       	
       	}
