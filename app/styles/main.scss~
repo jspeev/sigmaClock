@@ -1,0 +1,30 @@
+/*
+	phones - max width less than 768px
+	tablets - max width less than 992px
+	pc - the rest
+*/
+
+$screen-xs-max:768;
+$screen-sm-max:992;
+ 
+$phone: 	"(max-width: "+($screen-xs-max - 1)+"px)";
+$tablet: "(min-width: "+$screen-xs-max+"px) and (max-width: "+($screen-sm-max - 1)+"px)";
+$pc: 		"(min-width: "+$screen-sm-max+"px)";
+
+@media #{$phone}		{ @import "xs" }
+@media #{$tablet} 	{ @import "sm" }
+@media #{$pc}			{ @import "md" }
+
+.body{
+	margin-top:5vh;
+	margin-bottom:5vh;
+}
+
+.horizontalRule{
+	margin-top:10vh;
+	margin-bottom:15vh;
+}
+
+.settings{
+	margin-bottom:4vh;
+}

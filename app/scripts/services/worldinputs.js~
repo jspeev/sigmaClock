@@ -1,0 +1,28 @@
+'use strict';
+
+angular.module('sigmaWorldClockApp')
+  .factory('WorldInputs', function () {
+    // Service logic
+    var list = [];
+	 var controlTime;
+	 
+    // Public API
+    return {
+    	setControlTime:function(val){
+    		controlTime = val;
+    	},
+    	getControlTime:function(){
+    		return controlTime;
+    	},
+      addLocation:function(js){
+      	list[js.cityname] = js;
+      },
+      updateLocation:function(name,val){
+      	list[name].value = val;
+      },
+      getLocation:function(name){
+      	return list[name];
+      }
+      
+    };
+  });

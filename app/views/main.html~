@@ -1,0 +1,20 @@
+<div class="body">
+	<div class="row">
+		<settime location="0" cityname="{{jsControlCity.cityname}}" bctrl="true">Set {{jsControlCity.cityname}} time:</settime>
+	</div>
+	<div class="row results">
+		<displaytime location="2" cityname="{{jsControlCity.cityname}}" citynamestyle="controlCity" resultstyle="largeResults">{{jsControlCity.cityname}}:</displaytime>
+	  <div ng-repeat="wlocation in aryWorldLocations">
+		 <displaytime location="3" cityname="{{wlocation.cityname}}" citynamestyle="worldLocationLabel" resultstyle="regResults">{{wlocation.cityname}}:</displaytime>
+	  </div>
+	</div>
+	<HR class="horizontalRule">
+	<div class="row">
+	  <div class="col-md-12 settings">Settings</div>
+	</div>
+	<div class="row">
+	  <div ng-repeat="wlocation in aryWorldLocations">
+		 <settime location="1" cityname="{{wlocation.cityname}}">Time difference for {{wlocation.cityname}}:</settime>
+	  </div>
+	</div>
+</div>

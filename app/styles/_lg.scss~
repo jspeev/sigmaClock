@@ -1,0 +1,19 @@
+.inputText{
+	width:90%;
+}
+
+.submitButton{
+	width:100%;
+}
+
+.controlCity{
+	font-size:22px;
+}
+
+.largeResults{
+	font-size:55px;
+}
+
+.regResults{
+	font-size:33px;
+}

@@ -1,0 +1,7 @@
+<div class="col-md-{{placeconfig.lbl_md}} col-sm-{{placeconfig.lbl_sm}}"><div ng-transclude></div></div>
+	<div class="col-md-{{placeconfig.input_md}} col-sm-{{placeconfig.input_sm}}">
+		<input type="text" name="{{name}}" class="inputText" ng-model="{{cityval}}"></input>
+	</div>
+<div class="col-md-{{placeconfig.submit_md}} col-sm-{{placeconfig.submit_sm}}">
+	<button type="button" class="submitButton" ng-click="submit()">Submit</button>
+</div>

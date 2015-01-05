@@ -1,0 +1,18 @@
+'use strict';
+
+angular.module('sigmaWorldClockApp')
+  .factory('Worldlocation', function Worldlocation() {
+  	
+		var Worldlocation = {};
+		var list = [];
+		
+	   Worldlocation.getItem = function(index) {
+	   	console.log(list);
+	   	return list[index]; }
+	   Worldlocation.addItem = function(item) {
+	   	console.log('add',item);
+	   	list.push(item); }
+	
+	   return Worldlocation;
+	   
+  });

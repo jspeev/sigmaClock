@@ -1,0 +1,3 @@
+<div class="col-md-{{placeconfig.lbl_md}} col-sm-{{placeconfig.lbl_sm}}"><div ng-transclude class="{{cityNameStyle}}"></div></div>
+<div class="col-md-{{placeconfig.results_md}} col-sm-{{placeconfig.results_sm}} {{resultsStyle}}">{{adjustedTime | date:'HH:mm:ss'}}</div>',
+      
